@@ -1,5 +1,6 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -8,9 +9,111 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/controller"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ball count:" />
+
+            <SeekBar
+                android:id="@+id/ball_count"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:max="20"
+                android:progress="10"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" left ball distance:" />
+
+            <SeekBar
+                android:id="@+id/left_ball_dis"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:max="300"
+                android:progress="100"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="right ball distance:" />
+
+            <SeekBar
+                android:id="@+id/right_ball_dis"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:max="300"
+                android:progress="100"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" left ball velocity:" />
+
+            <SeekBar
+                android:id="@+id/left_ball_v"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="10"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="right ball velocity:" />
+
+            <SeekBar
+                android:id="@+id/right_ball_v"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="10"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/start"/>
 
 </RelativeLayout>
